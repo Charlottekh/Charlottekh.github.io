@@ -24,6 +24,10 @@ My email address is charlotte.hoogers@helsinki.fi.
 
 ## Projects
 
+[cmdline-course](https://github.com/Charlottekh/cmdline-course)
+[python-for-text-analysis (private)](https://github.com/Charlottekh/python-for-text-analysis)
+
+
 ## Misc. 
 
-[Gotta Love Cheese](https://en.wikipedia.org/wiki/Cheese) 
+[Check out these awesome websites!](https://neocities.org/browse) 
