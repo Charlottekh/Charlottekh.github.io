@@ -77,6 +77,7 @@ Here are to ways to change a file's encoding:
 
 `dos2unix myfile.utf-8.txt`
 
+Since I study language technology, all of this will be very useful for any preprocessing I will need to do on data in the future. Also it is also fun to know for personal projects.
 
 ## <font color="pink"> Module 3: Scripting, Configuration Files and Installing Programs </font>
 
@@ -127,6 +128,8 @@ When you continue to work with Python, you will come across Python packages. The
 
 This command installs the pandas library for you.
 
+
+Most of this was familiar to me. It had been a while since I had last made a Bash script so getting used to the syntax again took some effort. It is nice to know it again. I've used quite some Python in the past so installing libraries was not new to me!
 ## <font color="pink"> Module 4: Using ssh, scp and Version Control </font>
 
 This module focused on processes, remote servers and version control.
@@ -140,6 +143,8 @@ There exist numerous cheatsheets for this online, here is just one of them:
 
 <img src="assets/images/cheatsheet.png" alt="Photo" hspace="20" />
 
+I used git at my previous workplace so this was something I was familiar with already. Connecting to a remote server however was new, and I expect to need it during my studies! That was useful to learn.
+
 ## <font color="pink"> Module 5: Building Webpages using GitHub Pages </font>
 
 You are currently looking at the result of module 5. This module teaches you how to build webpages using Markdown and Jekyll. I am now capable of setting up a GitHub page, starting a local server using Jekyll and pushing my work to GitHub.
@@ -148,6 +153,7 @@ We use Ruby to set up Jekyll. Using `bundle exec jekyll serve` we set up a local
 
 In addition to all this, I also made my CV on Overleaf. It can be viewed on the Homepage. 
 
+I have never worked on a GitHub page this extensively before and hadn't really used Markdown before. It's nice to see the project progress and to create a final product. 
 
 All in all, you familiarize yourself with a lot things during this course.
 
@@ -162,3 +168,5 @@ All in all, you familiarize yourself with a lot things during this course.
 * And, finally, how to problem solve when nothing goes well on your first try
 
 <img src="assets/images/bashfordummies1.png" alt="Photo" hspace="20" width="30%" />
+
+
