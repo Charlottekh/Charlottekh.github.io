@@ -33,6 +33,9 @@ For all these commands, there are optional parameters to use when you want it to
 
 Personally, I have saved a cd to my windows directory with my masters folder and my most used folder in the unix system. I can mv and cp files from my Windowsstation to my Linux filestation in Ubuntu easily that way
 
+Another topic touched upon in this week is *permissions*
+You can check the permissions of a file using `ls -l` or add an additional path to a file at the end. You can change permissions using `chmod`. Knowing how permissions works is useful when you start running scripts from the command-line!
+
 ## <font color="pink"> Module 2: Text Processing in UNIX </font>
 
 In module one we learned how to open a file (with nano, cat, or less) and in module 2 we learned how to process these texts.
@@ -46,23 +49,33 @@ commands | what it does
 `sort -f` | Returns a list of all words in alphabetical order, ignoring capital letters
 `tr -s "[:space:][:punct:]" "\n"` | Puts every word on a new line by removing punctuation and spaces, and squeezes double spaces with -s 
 
+It is possible to combine these commands, like this:
+
 > `cat myfile.txt | tr -s "[:space:][:punct:]" "\n" | sort -f | uniq -i` 
 
-Combines the above and gives you a wordlist! However, whenever making wordlists it is always important to look at the file you're working on, as it is never a one size fits all solution
+This gives you a wordlist! However, whenever making wordlists it is always important to look at the file you're working on, as it is never a one size fits all solution
 
 Another combination of commands is this:
 
-> `cat life_of_bee.txt | tr -s "\n\r\t "  "\n" | tr -dc "[:aln>cat life_of_bee.txt | tr -s "\n\r\t "  "\n" | tr -dc "[:alnum:]\n'" | sort | uniq -c | sort -nr  > life_of_bee.freq``
+> `cat myfile.txt | tr -s "\n\r\t "  "\n" | tr -dc "[:alnum:]\n'" | sort | uniq -c | sort -nr  > myfile.freq`
 
-sorted word freq list
+This gives you a sorted word frequency list. This combination and the combination above all have in common that they first do some kind of modification to get rid of unwanted characters, like punctuation, white spaces and new lines. The following two transformations both get rid of newlines, but with different methods:
 
-> `| tr -dc "A-Za-z0-9\n'" ` en `tr -dc "[:alnum:]\n'"`
 
-Sometimes it is necessary to check the filetype of a file and to convert it.
+> `| tr -dc "A-Za-z0-9\n'" ` and `tr -dc "[:alnum:]\n'"`
 
-file ..txt
-iconv -f ISO-8859-1 -t UTF-8 katinka_rabe.txt > katinka_rabe.utf-8.txt
-dos2unix katinka_rabe.utf-8.txt
+There is also `sed`, which can be used to find and change patterns in a text.
+
+
+Sometimes it is necessary to check the filetype of a file before and to convert it before you can process it.
+
+You can check a file's encoding with `file <filename>`.
+Here are to ways to change a file's encoding:
+
+`iconv -f ISO-8859-1 -t UTF-8 myfile.txt > myfile.utf-8.txt`
+
+
+`dos2unix myfile.utf-8.txt`
 
 
 ## <font color="pink"> Module 3: Scripting, Configuration Files and Installing Programs </font>
@@ -113,12 +126,39 @@ When you continue to work with Python, you will come across Python packages. The
 >`pip install pandas`
 
 This command installs the pandas library for you.
+
 ## <font color="pink"> Module 4: Using ssh, scp and Version Control </font>
 
-This module focused on process, remote servers and version control.
+This module focused on processes, remote servers and version control.
 
+A process is is something that is currently executed on your computer. You can check all your current processes using `ps`. If you ever want to stop an unwanted proces, you can use `kill` with the process id.
 
-Version control was introduced using github. It teaches you how to clone a rep, push and pull. revrt changes and other important tools when working on a project.
+Sometimes you need to perform a task which is too heavy on your own computer. In that case, it is recommended to connect to a remote server and perform the task on a supercomputer. Puhti is one of those computers. 
+
+Version control was introduced using github. It teaches you how to clone a rep, push, pull, revert changes and other important tools when working on a project.
 There exist numerous cheatsheets for this online, here is just one of them:
 
-<img src="assets/images/cheatsheet.png" alt="Photo" hspace="20" width="30%" align="right"/>
+<img src="assets/images/cheatsheet.png" alt="Photo" hspace="20" />
+
+## <font color="pink"> Module 5: Building Webpages using GitHub Pages </font>
+
+You are currently looking at the result of module 5. This module teaches you how to build webpages using Markdown and Jekyll. I am now capable of setting up a GitHub page, starting a local server using Jekyll and pushing my work to GitHub.
+
+We use Ruby to set up Jekyll. Using `bundle exec jekyll serve` we set up a local server where I can view my GitHub page. Pretty cool right?
+
+In addition to all this, I also made my CV on Overleaf. It can be viewed on the Homepage. 
+
+
+All in all, you familiarize yourself with a lot things during this course.
+
+* Moving through directories
+* Creating directories and files
+* Processing these files and transforming them!
+* How to put commands in a script
+* How to check for permissions and how to change them
+* How to use GIT
+* How to connect to remote servers
+* How to build a page using Markdown
+* And, finally, how to problem solve when nothing goes well on your first try
+
+<img src="assets/images/bashfordummies1.png" alt="Photo" hspace="20" width="30%" />
