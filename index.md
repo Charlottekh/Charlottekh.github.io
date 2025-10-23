@@ -4,7 +4,7 @@ layout: default
 
 ## <font color="pink"> Introduction </font>
 
-<img src="assets/images/nijntje.png" alt="Photo" hspace="20" width="30%" align="right"/> Hello, I am a language technology student at the university of Helsinki
+<img src="assets/images/nijntje.png" alt="Photo" hspace="20" width="30%" align="right"/> Hello, I am a language technology student at the university of Helsinki. Here's a link to [my cv](https://www.overleaf.com/read/wbccqxmfbkys#97978c)
 
 ## <font color="pink"> Find me on </font>
 
